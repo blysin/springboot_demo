@@ -1,0 +1,5 @@
+说明
+
+只使用web依赖，创建一个controller即可启动
+
+创建的Service只是测试Junit

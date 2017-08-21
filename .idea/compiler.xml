@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="config" />
+        <module name="demos" />
+        <module name="helloworld" />
+        <module name="restfull" />
+        <module name="sprintbootdemo" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="config" target="1.8" />
+      <module name="demos" target="1.5" />
+      <module name="helloworld" target="1.8" />
+      <module name="restfull" target="1.8" />
+      <module name="sprintbootdemo" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

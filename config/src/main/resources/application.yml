@@ -1,0 +1,30 @@
+# 在这里声明当前是开发环境或生产环境（dev or produce）
+spring:
+  profiles:
+    active: produce
+
+# 这里的配置不区分环境
+guava:
+  initNum: 10
+  threadProfix: guava_thread_
+  type: singleThread
+
+---
+# 开发环境下的配置
+
+spring:
+  profiles: dev
+
+blysin:
+  debugger: false
+  name: 现在是开发环境
+
+---
+# 生产环境下的配置
+
+spring:
+  profiles: produce
+
+blysin:
+  debugger: true
+  name: 现在是生产环境
