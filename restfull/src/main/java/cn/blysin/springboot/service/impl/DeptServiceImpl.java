@@ -3,6 +3,7 @@ package cn.blysin.springboot.service.impl;
 import cn.blysin.springboot.dao.DeptDao;
 import cn.blysin.springboot.domain.Dept;
 import cn.blysin.springboot.service.DeptService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +14,7 @@ import java.util.List;
  * @date 2017/7/25
  */
 @Service
+@Slf4j
 public class DeptServiceImpl implements DeptService {
     @Autowired
     private DeptDao deptDao;
@@ -23,6 +25,9 @@ public class DeptServiceImpl implements DeptService {
 
     @Override
     public List<Dept> findAll() {
+        log.debug("find all debug");
+        log.info("find all info");
+        log.warn("find all warn");
         return deptDao.findAll();
     }
 }

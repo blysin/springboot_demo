@@ -12,8 +12,11 @@ guava:
 mybatis:
   mapper-locations: classpath:mapper/*/*.xml
   configuration:
-    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+      log-impl: org.apache.ibatis.logging.log4j.Log4jImpl
   type-aliases-package: cn.blysin.springboot.domain
+
+
+
 
 ---
 # 开发环境下的配置
