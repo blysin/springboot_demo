@@ -10,6 +10,7 @@ Spring boot多模块的整合学习。
 
 3.  restfull：
 
-    Controller使用restful API，并整合MyBatis。
+    Controller使用restful API，并整合了MyBatis+druid，并配置日记级别
 
 4.  1
+
