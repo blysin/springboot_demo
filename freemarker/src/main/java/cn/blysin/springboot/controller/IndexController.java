@@ -10,11 +10,12 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @since 2017/8/23
  */
 @Controller
-@Slf4j
 @RequestMapping("")
+@Slf4j
 public class IndexController {
     @RequestMapping("/index")
     public String index(){
+        log.info("访问主页");
         return "index/index";
     }
 }

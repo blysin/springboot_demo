@@ -97,15 +97,16 @@
             </nav>
             <div class="jumbotron">
                 <h1>
-                    Hello, world!
+                    可是不好笑，什么意思?12
                 </h1>
                 <p>
-                    This is a template for a simple marketing or informational website. It includes a large callout
-                    called the hero unit and three supporting pieces of content. Use it as a starting point to create
-                    something more unique.
+                    不能热更新，好麻烦，刚才那个东西是什么？
+                    Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
+                    condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis
+                    euismod. Donec sed odio dui.
                 </p>
                 <p>
-                    <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                    <a class="btn btn-primary btn-large" href="https://www.google.com" target="_blank">Learn more</a>
                 </p>
             </div>
         </div>

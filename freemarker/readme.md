@@ -6,3 +6,6 @@
 `  devtools:
      remote:
        context-path: classpath:/views/`
+       
+actuator状态监控：
+http://www.jianshu.com/p/734519d3c383
