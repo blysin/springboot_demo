@@ -3,8 +3,6 @@ package cn.blysin.springboot.dao;
 import cn.blysin.springboot.domain.Dept;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -16,4 +14,5 @@ import java.util.List;
 public interface DeptDao {
     Dept get(Integer id);
     List<Dept> findAll();
+    void insert(Dept dept);
 }

@@ -1,0 +1,22 @@
+2017-08-21 17:27:31.347  INFO 6960 --- [main] c.b.springboot.RestfullApplicationTests  : Starting RestfullApplicationTests on Blysin-ThinkPad with PID 6960 (started by Blysin in D:\workspace2\demos\restfull)
+2017-08-21 17:27:31.349 DEBUG 6960 --- [main] c.b.springboot.RestfullApplicationTests  : Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+2017-08-21 17:27:31.349  INFO 6960 --- [main] c.b.springboot.RestfullApplicationTests  : The following profiles are active: dev
+2017-08-21 17:27:31.452  INFO 6960 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@782859e: startup date [Mon Aug 21 17:27:31 CST 2017]; root of context hierarchy
+2017-08-21 17:27:39.633  INFO 6960 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@782859e: startup date [Mon Aug 21 17:27:31 CST 2017]; root of context hierarchy
+2017-08-21 17:27:39.816  INFO 6960 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/log/writelog]}" onto public java.lang.Object cn.blysin.springboot.controller.LogController.writeLog()
+2017-08-21 17:27:39.825  INFO 6960 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-08-21 17:27:39.835  INFO 6960 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-08-21 17:27:39.965  INFO 6960 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-21 17:27:39.965  INFO 6960 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-21 17:27:40.086  INFO 6960 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-21 17:27:41.027  INFO 6960 --- [main] c.b.springboot.RestfullApplicationTests  : Started RestfullApplicationTests in 10.974 seconds (JVM running for 13.061)
+2017-08-21 17:27:41.131 DEBUG 6960 --- [main] c.b.springboot.RestfullApplicationTests  : ------------------------>test
+2017-08-21 17:27:41.131 DEBUG 6960 --- [main] c.b.s.service.impl.DeptServiceImpl       : find all debug
+2017-08-21 17:27:41.132  INFO 6960 --- [main] c.b.s.service.impl.DeptServiceImpl       : find all info
+2017-08-21 17:27:41.132  WARN 6960 --- [main] c.b.s.service.impl.DeptServiceImpl       : find all warn
+2017-08-21 17:27:41.324  INFO 6960 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2017-08-21 17:27:42.089 DEBUG 6960 --- [main] c.blysin.springboot.dao.DeptDao.findAll  : ==>  Preparing: SELECT * FROM dept 
+2017-08-21 17:27:42.168 DEBUG 6960 --- [main] c.blysin.springboot.dao.DeptDao.findAll  : ==> Parameters: 
+2017-08-21 17:27:42.264 DEBUG 6960 --- [main] c.blysin.springboot.dao.DeptDao.findAll  : <==      Total: 4
+2017-08-21 17:27:42.291  INFO 6960 --- [Thread-3] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@782859e: startup date [Mon Aug 21 17:27:31 CST 2017]; root of context hierarchy
+2017-08-21 17:27:42.323  INFO 6960 --- [Thread-3] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

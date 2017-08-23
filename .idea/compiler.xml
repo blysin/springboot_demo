@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="config" />
         <module name="demos" />
+        <module name="freemarker" />
         <module name="helloworld" />
         <module name="restfull" />
         <module name="sprintbootdemo" />
@@ -16,6 +17,7 @@
     <bytecodeTargetLevel>
       <module name="config" target="1.8" />
       <module name="demos" target="1.5" />
+      <module name="freemarker" target="1.8" />
       <module name="helloworld" target="1.8" />
       <module name="restfull" target="1.8" />
       <module name="sprintbootdemo" target="1.8" />

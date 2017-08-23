@@ -1,0 +1,184 @@
+2017-08-21 17:23:59.803  INFO 16744 --- [restartedMain] c.blysin.springboot.RestfullApplication  : Starting RestfullApplication on Blysin-ThinkPad with PID 16744 (D:\workspace2\demos\restfull\target\classes started by Blysin in D:\workspace2\demos)
+2017-08-21 17:23:59.809  INFO 16744 --- [restartedMain] c.blysin.springboot.RestfullApplication  : The following profiles are active: dev
+2017-08-21 17:23:59.986  INFO 16744 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@713e10f2: startup date [Mon Aug 21 17:23:59 CST 2017]; root of context hierarchy
+2017-08-21 17:24:03.946  INFO 16744 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-08-21 17:24:03.962  INFO 16744 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-08-21 17:24:03.964  INFO 16744 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-08-21 17:24:04.088  INFO 16744 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-08-21 17:24:04.089  INFO 16744 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4110 ms
+2017-08-21 17:24:04.475  INFO 16744 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-08-21 17:24:04.477  INFO 16744 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2017-08-21 17:24:04.481  INFO 16744 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-08-21 17:24:04.482  INFO 16744 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-08-21 17:24:04.482  INFO 16744 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-08-21 17:24:04.482  INFO 16744 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-08-21 17:24:04.482  INFO 16744 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2017-08-21 17:24:06.166  INFO 16744 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@713e10f2: startup date [Mon Aug 21 17:23:59 CST 2017]; root of context hierarchy
+2017-08-21 17:24:06.252  INFO 16744 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/log/writelog]}" onto public java.lang.Object cn.blysin.springboot.controller.LogController.writeLog()
+2017-08-21 17:24:06.260  INFO 16744 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-08-21 17:24:06.260  INFO 16744 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-08-21 17:24:06.307  INFO 16744 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-21 17:24:06.307  INFO 16744 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-21 17:24:06.417  INFO 16744 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-21 17:24:06.817  INFO 16744 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-08-21 17:24:07.115  INFO 16744 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-08-21 17:24:07.117  INFO 16744 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'statFilter' has been autodetected for JMX exposure
+2017-08-21 17:24:07.117  INFO 16744 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2017-08-21 17:24:07.123  INFO 16744 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2017-08-21 17:24:07.133  INFO 16744 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2017-08-21 17:24:07.213  INFO 16744 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-08-21 17:24:07.219  INFO 16744 --- [restartedMain] c.blysin.springboot.RestfullApplication  : Started RestfullApplication in 8.432 seconds (JVM running for 10.743)
+2017-08-21 17:24:16.997  INFO 16744 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-08-21 17:24:16.997  INFO 16744 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-08-21 17:24:17.059  INFO 16744 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 62 ms
+2017-08-21 17:24:17.114  INFO 16744 --- [http-nio-8080-exec-2] c.b.springboot.controller.LogController  : This is an info message
+2017-08-21 17:24:17.114  WARN 16744 --- [http-nio-8080-exec-2] c.b.springboot.controller.LogController  : This is a warn message
+2017-08-21 17:24:17.114 ERROR 16744 --- [http-nio-8080-exec-2] c.b.springboot.controller.LogController  : This is an error message
+2017-08-21 17:24:17.115  INFO 16744 --- [http-nio-8080-exec-2] c.b.s.service.impl.DeptServiceImpl       : find all info
+2017-08-21 17:24:17.116  WARN 16744 --- [http-nio-8080-exec-2] c.b.s.service.impl.DeptServiceImpl       : find all warn
+2017-08-21 17:24:17.613  INFO 16744 --- [http-nio-8080-exec-2] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2017-08-21 17:24:56.120 ERROR 18016 --- [restartedMain] o.s.boot.SpringApplication               : Application startup failed
+
+java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.classic.joran.action.LoggerAction - No 'name' attribute in element logger, around line: 4, column: 46
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - Could not find an AppenderAttachable at the top of execution stack. Near [appender-ref] line 5
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - Could not find an AppenderAttachable at the top of execution stack. Near [appender-ref] line 6
+ERROR in ch.qos.logback.classic.joran.action.LoggerAction - No 'name' attribute in element logger, around line: 4, column: 46
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - Could not find an AppenderAttachable at the top of execution stack. Near [appender-ref] line 5
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - Could not find an AppenderAttachable at the top of execution stack. Near [appender-ref] line 6
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:162)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:81)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:59)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:115)
+	at org.springframework.boot.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:303)
+	at org.springframework.boot.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:276)
+	at org.springframework.boot.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:239)
+	at org.springframework.boot.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:212)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:167)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:122)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:74)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:54)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:325)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:296)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at cn.blysin.springboot.RestfullApplication.main(RestfullApplication.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+
+2017-08-21 17:25:10.502 ERROR 16604 --- [restartedMain] o.s.boot.SpringApplication               : Application startup failed
+
+java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.classic.joran.action.LoggerAction - No 'name' attribute in element logger, around line: 4, column: 46
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - Could not find an AppenderAttachable at the top of execution stack. Near [appender-ref] line 5
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - Could not find an AppenderAttachable at the top of execution stack. Near [appender-ref] line 6
+ERROR in ch.qos.logback.classic.joran.action.LoggerAction - No 'name' attribute in element logger, around line: 4, column: 46
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - Could not find an AppenderAttachable at the top of execution stack. Near [appender-ref] line 5
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - Could not find an AppenderAttachable at the top of execution stack. Near [appender-ref] line 6
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:162)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:81)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:59)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:115)
+	at org.springframework.boot.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:303)
+	at org.springframework.boot.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:276)
+	at org.springframework.boot.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:239)
+	at org.springframework.boot.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:212)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:167)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:122)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:74)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:54)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:325)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:296)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at cn.blysin.springboot.RestfullApplication.main(RestfullApplication.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+
+2017-08-21 17:25:39.518  INFO 14816 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@191954d3: startup date [Mon Aug 21 17:25:39 CST 2017]; root of context hierarchy
+2017-08-21 17:25:42.418  INFO 14816 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-08-21 17:25:42.435  INFO 14816 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-08-21 17:25:42.436  INFO 14816 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-08-21 17:25:42.554  INFO 14816 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-08-21 17:25:42.555  INFO 14816 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3043 ms
+2017-08-21 17:25:42.854  INFO 14816 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-08-21 17:25:42.855  INFO 14816 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2017-08-21 17:25:42.863  INFO 14816 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-08-21 17:25:42.864  INFO 14816 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-08-21 17:25:42.864  INFO 14816 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-08-21 17:25:42.865  INFO 14816 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-08-21 17:25:42.865  INFO 14816 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2017-08-21 17:25:44.073  INFO 14816 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@191954d3: startup date [Mon Aug 21 17:25:39 CST 2017]; root of context hierarchy
+2017-08-21 17:25:44.163  INFO 14816 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/log/writelog]}" onto public java.lang.Object cn.blysin.springboot.controller.LogController.writeLog()
+2017-08-21 17:25:44.167  INFO 14816 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-08-21 17:25:44.167  INFO 14816 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-08-21 17:25:44.200  INFO 14816 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-21 17:25:44.200  INFO 14816 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-21 17:25:44.243  INFO 14816 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-21 17:25:44.533  INFO 14816 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-08-21 17:25:44.621  INFO 14816 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-08-21 17:25:44.623  INFO 14816 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'statFilter' has been autodetected for JMX exposure
+2017-08-21 17:25:44.623  INFO 14816 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2017-08-21 17:25:44.632  INFO 14816 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2017-08-21 17:25:44.634  INFO 14816 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2017-08-21 17:25:44.696  INFO 14816 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-08-21 17:25:51.493  INFO 14816 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-08-21 17:25:51.494  INFO 14816 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-08-21 17:25:51.532  INFO 14816 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 38 ms
+2017-08-21 17:25:51.569  WARN 14816 --- [http-nio-8080-exec-1] c.b.springboot.controller.LogController  : This is a warn message
+2017-08-21 17:25:51.569 ERROR 14816 --- [http-nio-8080-exec-1] c.b.springboot.controller.LogController  : This is an error message
+2017-08-21 17:25:51.570  WARN 14816 --- [http-nio-8080-exec-1] c.b.s.service.impl.DeptServiceImpl       : find all warn
+2017-08-21 17:25:51.670  INFO 14816 --- [http-nio-8080-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2017-08-21 17:26:23.810  INFO 17844 --- [restartedMain] c.blysin.springboot.RestfullApplication  : Starting RestfullApplication on Blysin-ThinkPad with PID 17844 (D:\workspace2\demos\restfull\target\classes started by Blysin in D:\workspace2\demos)
+2017-08-21 17:26:23.820 DEBUG 17844 --- [restartedMain] c.blysin.springboot.RestfullApplication  : Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+2017-08-21 17:26:23.820  INFO 17844 --- [restartedMain] c.blysin.springboot.RestfullApplication  : The following profiles are active: dev
+2017-08-21 17:26:23.949  INFO 17844 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2150b41b: startup date [Mon Aug 21 17:26:23 CST 2017]; root of context hierarchy
+2017-08-21 17:26:27.374  INFO 17844 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-08-21 17:26:27.393  INFO 17844 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-08-21 17:26:27.396  INFO 17844 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-08-21 17:26:27.508  INFO 17844 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-08-21 17:26:27.509  INFO 17844 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3567 ms
+2017-08-21 17:26:27.951  INFO 17844 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-08-21 17:26:27.955  INFO 17844 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2017-08-21 17:26:27.962  INFO 17844 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-08-21 17:26:27.963  INFO 17844 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-08-21 17:26:27.963  INFO 17844 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-08-21 17:26:27.963  INFO 17844 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-08-21 17:26:27.963  INFO 17844 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2017-08-21 17:26:29.590  INFO 17844 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2150b41b: startup date [Mon Aug 21 17:26:23 CST 2017]; root of context hierarchy
+2017-08-21 17:26:29.678  INFO 17844 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/log/writelog]}" onto public java.lang.Object cn.blysin.springboot.controller.LogController.writeLog()
+2017-08-21 17:26:29.683  INFO 17844 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-08-21 17:26:29.683  INFO 17844 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-08-21 17:26:29.733  INFO 17844 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-21 17:26:29.733  INFO 17844 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-21 17:26:29.851  INFO 17844 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-21 17:26:30.258  INFO 17844 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-08-21 17:26:30.587  INFO 17844 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-08-21 17:26:30.589  INFO 17844 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'statFilter' has been autodetected for JMX exposure
+2017-08-21 17:26:30.589  INFO 17844 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2017-08-21 17:26:30.597  INFO 17844 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2017-08-21 17:26:30.599  INFO 17844 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2017-08-21 17:26:30.683  INFO 17844 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-08-21 17:26:30.690  INFO 17844 --- [restartedMain] c.blysin.springboot.RestfullApplication  : Started RestfullApplication in 7.616 seconds (JVM running for 8.93)
+2017-08-21 17:26:44.447  INFO 17844 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-08-21 17:26:44.447  INFO 17844 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-08-21 17:26:44.501  INFO 17844 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 54 ms
+2017-08-21 17:26:44.562 DEBUG 17844 --- [http-nio-8080-exec-2] c.b.springboot.controller.LogController  : This is a debug message
+2017-08-21 17:26:44.563  INFO 17844 --- [http-nio-8080-exec-2] c.b.springboot.controller.LogController  : This is an info message
+2017-08-21 17:26:44.563  WARN 17844 --- [http-nio-8080-exec-2] c.b.springboot.controller.LogController  : This is a warn message
+2017-08-21 17:26:44.563 ERROR 17844 --- [http-nio-8080-exec-2] c.b.springboot.controller.LogController  : This is an error message
+2017-08-21 17:26:44.563 DEBUG 17844 --- [http-nio-8080-exec-2] c.b.s.service.impl.DeptServiceImpl       : find all debug
+2017-08-21 17:26:44.563  INFO 17844 --- [http-nio-8080-exec-2] c.b.s.service.impl.DeptServiceImpl       : find all info
+2017-08-21 17:26:44.563  WARN 17844 --- [http-nio-8080-exec-2] c.b.s.service.impl.DeptServiceImpl       : find all warn
+2017-08-21 17:26:45.003  INFO 17844 --- [http-nio-8080-exec-2] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2017-08-21 17:26:45.478 DEBUG 17844 --- [http-nio-8080-exec-2] c.blysin.springboot.dao.DeptDao.findAll  : ==>  Preparing: SELECT * FROM dept 
+2017-08-21 17:26:45.527 DEBUG 17844 --- [http-nio-8080-exec-2] c.blysin.springboot.dao.DeptDao.findAll  : ==> Parameters: 
+2017-08-21 17:26:45.576 DEBUG 17844 --- [http-nio-8080-exec-2] c.blysin.springboot.dao.DeptDao.findAll  : <==      Total: 4
