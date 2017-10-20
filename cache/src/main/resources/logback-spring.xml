@@ -6,8 +6,8 @@
     <!-- 控制台输出 -->
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
-            <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符-->
-            <pattern>[%-5level] %d{HH:mm:ss} %logger{50} - %msg%n</pattern>
+            <!--格式化输出：%clr表示使用彩色字体，%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符-->
+            <pattern>[%clr(%-5level)] %d{HH:mm:ss} %clr(%logger{50}){cyan} - %msg%n</pattern>
         </encoder>
     </appender>
     <!-- 按照每天生成日志文件 -->

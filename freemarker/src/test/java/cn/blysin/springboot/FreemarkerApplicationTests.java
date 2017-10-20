@@ -1,5 +1,6 @@
 package cn.blysin.springboot;
 
+import cn.blysin.springboot.property.GuavaProperties;
 import cn.blysin.springboot.property.UserProperties;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,9 +13,12 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class FreemarkerApplicationTests {
 	@Autowired
 	private UserProperties userProperties;
+
+	@Autowired
+	private GuavaProperties guavaProperties;
 	@Test
 	public void contextLoads() {
-		System.out.println(userProperties);
+		System.out.println(guavaProperties);
 	}
 
 }

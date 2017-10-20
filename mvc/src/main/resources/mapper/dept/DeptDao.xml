@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.blysin.springboot.dao.DeptDao">
+    <insert id="insert" parameterType="cn.blysin.springboot.domain.Dept">
+        INSERT INTO dept (
+            num,
+            pid,
+            simplename,
+            fullname,
+            tips,
+            version
+        )
+        values
+            (
+                #{num},
+                #{pid},
+                #{simplename},
+                #{fullname},
+                #{tips},
+                #{version}
+            )
+    </insert>
+    <select id="get" parameterType="Integer" resultType="cn.blysin.springboot.domain.Dept">
+        SELECT * FROM dept WHERE id = #{0}
+    </select>
+    <select id="findAll" resultType="Dept">
+        SELECT * FROM dept
+    </select>
+</mapper>

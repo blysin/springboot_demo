@@ -6,19 +6,22 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="cache" />
         <module name="config" />
         <module name="demos" />
         <module name="freemarker" />
         <module name="helloworld" />
+        <module name="mvc" />
         <module name="restfull" />
-        <module name="sprintbootdemo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="cache" target="1.8" />
       <module name="config" target="1.8" />
       <module name="demos" target="1.5" />
       <module name="freemarker" target="1.8" />
       <module name="helloworld" target="1.8" />
+      <module name="mvc" target="1.8" />
       <module name="restfull" target="1.8" />
       <module name="sprintbootdemo" target="1.8" />
     </bytecodeTargetLevel>
