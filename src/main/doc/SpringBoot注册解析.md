@@ -37,14 +37,20 @@
 9. @Configuration
 
    bean容器，进行bean对象的配置
+   0
 
 10. @Bean
 
-    直接创建一个bean交给IOC管理
+  直接创建一个bean交给IOC管理
 
 11. @EnableAutoConfiguration
 
-    表示可以实现自动配置，结合一些@EnableCache、等注解使用实现框架自动整合
+    表示可以实现自动配置，结合一些@Enablexxx注解使用实现框架自动整合
+
+    - @EnableConfigurationProperties开启对@ConfigurationProperties注解配置bean的支持
+    - @EnableJpaRepositories开启对Spring Data JPA Repository的支持
+    - @EnableTransactionManagement开启声明式事务
+    - @EnableCaching开启缓存支持
 
 12. @AutoWired
 
@@ -148,7 +154,7 @@
 
 10. @JsonIgnore
 
-    JSON序列化是忽略改属性
+  JSON序列化是忽略改属性
 
 11. @JoinColumn(name="")
 
@@ -230,23 +236,102 @@
 
 ### 读取配置文件
 
+```java
+@Configuration
+@PropertySource("classpath:blysin.properties")
+public class BlysinProperties {
+    @Value("This is value annotation")
+    private String normal;
 
+    @Value("#{systemProperties['os.name']}")
+    private String osName;
+
+    @Value("#{T(java.lang.Math).random() * 100.0}")
+    private double currnetTime;
+
+//    @Value("#{demoService.another}")//import property from another bean
+//    private String fromAnother;
+
+    @Value("classpath:blysin.properties")
+    private Resource blysinProperties;//注入配置文件
+
+    @Value("http://www.baidu.com")
+    private Resource baiduUrl;
+
+    @Value("${book.name}")
+    private String bookName;
+
+    @Autowired
+    private Environment environment;
+
+    public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer(){
+        PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer = new PropertySourcesPlaceholderConfigurer();
+        return propertySourcesPlaceholderConfigurer;
+    }
+
+    public void outPut() throws IOException {
+        System.out.println(normal);
+        System.out.println(osName);
+        System.out.println(currnetTime);
+        System.out.println(IOUtils.toString(baiduUrl.getInputStream()));
+        System.out.println(bookName);
+        System.out.println(environment.getProperty("book.author"));
+        System.out.println(IOUtils.toString(blysinProperties.getInputStream()));
+    }
+
+
+}
+```
 
 ### SpringEvent
 
+1. 首先我们要实现ApplicationListener 实现我们自己的监听
+
+2. 定义我们自己的事件 通过集成ApplicationEvent实现
+
+3. 定义config启动
+
+4. 通过applicationContext 发布事件
+
+   ```java
+   @Component
+   public class DemoPublisher {
+       @Autowired
+       private ApplicationContext applicationContext;
+
+       public void publish(String msg) {
+           applicationContext.publishEvent(new DemoEvent(this, msg));
+       }
+   }
+   ```
+
 ### SpringAvare
+
+说明：bean和Spring是无耦合的，但是如果想用到Spring容器的功能资源，就要你的不饿按知道Spring的存在，这就是Spring aware
+
+
 
 ### 多线程
 
+Spring通过TaskExecutor来实现多线程并发编程，使用ThreadPoolExecutor可以实现基于线程池的的TaskExecutor，使用@EnableAsync开启对异步任务的支持，并通过实际执行bean方法中使用@Async注解来声明一个异步任务
+
 ### 计划任务
 
-### 条件注解
+通过配置注解@EenableScheduline来开启对计划任务的支持，然后在要执行的任务上加注解@Scheduled。Spring通过@Scheduled支持多种类型计划任务，包括cron，fixDelay，fixRate
+
+### 条件注解@Conditional
+
+@Conditional根据满足某一个特定条件创建一个特定的bean，比如，当一个jar包在一个类路径下的时候，自动配置一个或多个bena，或者只有摸个bean被创建时才会创建另外一个bean。总的来说，就是根据特定条件来空值bean的创建行为。这样我们可以利用这个特性进行一些自动的配置。
 
 ### 组合注解与源注解
+
+类似继承效果，多个注解可以组合成一个注解，并实现多个功能
 
 ### @Enable***注解原理
 
 ### SpringMVC
+
+通过实现WebApplicationInitializer，等同与在web.xml中进行配置。
 
 
 
