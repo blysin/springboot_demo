@@ -1,6 +1,12 @@
 package com.example.helloworld.controller;
 
 import org.joda.time.DateTime;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
+import org.springframework.cloud.client.serviceregistry.Registration;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -17,9 +23,18 @@ import java.util.Date;
 @Controller
 @RequestMapping("/hello")
 public class HelloWorldController {
+    private final Logger logger = LoggerFactory.getLogger(HelloWorldController.class);
+
+    @Autowired
+    private DiscoveryClient client;
+
+    @Autowired
+    private Registration registration;
+
     @RequestMapping("")
     @ResponseBody
     public String hello(String name){
+        logger.info("host:{} service_id:{}, ",registration.getHost(),registration.getServiceId());
         return "hello spring boot "+ name;
     }
 

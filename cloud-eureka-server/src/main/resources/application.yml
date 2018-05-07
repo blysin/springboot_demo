@@ -1,0 +1,16 @@
+# register-with-eureka=false 不用去注册中心注册自己
+# fetch-registry: false 不用去注册中心检索服务
+
+server:
+  port: 1111
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+spring:
+  application:
+    name: eureka-server
+
+
