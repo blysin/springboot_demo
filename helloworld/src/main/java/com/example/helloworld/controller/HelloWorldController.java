@@ -35,7 +35,7 @@ public class HelloWorldController {
     @ResponseBody
     public String hello(String name){
         logger.info("host:{} service_id:{}, ",registration.getHost(),registration.getServiceId());
-        return "hello spring boot "+ name;
+        return "host:"+registration.getHost()+" service_id:"+ registration.getServiceId()+" ---> " +registration.getPort();
     }
 
     @RequestMapping("/session")
