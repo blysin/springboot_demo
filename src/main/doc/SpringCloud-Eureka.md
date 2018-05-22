@@ -70,6 +70,14 @@ eureka.client.service-url.defaultZone=http://t.cn:1111/eureka/,http://t1.cn:1112
 
 defaultZone指向所有集群服务
 
+defaultZone也可以配置用户名和密码：
+
+```properties
+eureka.client.service-url.defaultZone=http://<username>:<password>@t.cn:1111/eureka/
+```
+
+
+
 ## Eureka详解
 
 ### 基础构架
@@ -77,6 +85,10 @@ defaultZone指向所有集群服务
 - **服务注册中心**：Eureka-Server
 - **服务提供方**：服务注册到注册中心后就是一个提供者，通过Eureka-Client注册
 - **服务消费者**：从服务注册中心获取并使用其他服务，通常使用Ribbon或Feign方式来消费
+  - 注册服务
+  - 服务租约
+  - 取消租约
+  - 获取服务列表
 
 ------
 
@@ -107,11 +119,81 @@ defaultZone指向所有集群服务
   # 获取服务时间间隔
   ```
 
-  ​
+  
+
+  
+
+### Client端配置列表
+
+| 参数名                                       | 说明                                                         | 默认值 |
+| -------------------------------------------- | ------------------------------------------------------------ | ------ |
+| enable                                       | 是否启用Eureka客户端                                         | true   |
+| registryFetchIntervalSeconds                 | 从注册中心获取服务列表的时间间隔                             | 30     |
+| instanceInfoReplicationIntervalSeconds       | 续租时间间隔                                                 | 30     |
+| initialInstanceInfoReplicationIntervalSecond | 初始化实例信息到注册中心的间隔                               | 40     |
+| eurekaService UrlPollIntervalSeconds         | 轮询Eureka注册中心地址更改的时间间隔，当使用spring boot config时动态刷新注册中心服务地址时使用 | 300    |
+| eurekaServerReadTimeoutSeconds               | 读取注册中心信息的超市时间                                   | 8      |
+| eurekaServerConnectTimeoutSeconds            | 连接超时时间                                                 | 5      |
+| eurekaServerTotalConnections                 | 客户端与服务端的连接总数                                     | 200    |
+| eurekaServerTotalConnectionsPerHost          | 客户端到每个服务端主机的连接总数                             | 50     |
+| eurekaConnectionIdleTimeoutSeconds           | 注册中心连接的空闲关闭时间                                   | 30     |
+| heartbeatExecutorThreadPoolSize              | 心跳连接的初始化线程数                                       | 2      |
+| heartbeatExecutorExponentialBackOffBound     | 心跳超市重试延迟时间最大倍数值                               | 10     |
+| CacheReFreshExecutorThreadPoolSize           | 缓存刷新线程池的初始化线程数                                 | 2      |
+| useDnsForFetchingServiceUrls                 | 使用DNS来获取注册中心的serviceUrl                            | false  |
+| registerWithEureka                           | 是否将自身注册到注册中心                                     | true   |
+| perferSameZoneEureka                         | 是否偏好使用同一zone的eureka服务端                           | true   |
+| filterOnlyUpInstances                        | 获取实例时是否过滤，仅保留UP状态的实例                       | true   |
+| fetchRegistry                                | 是否从eureka服务端获取注册信息                               | true   |
+|                                              |                                                              |        |
+
+### 实例名配置
+
+​	每个微服务想注册中心注册时都需要提供一个实例ID，服务端根据命名规则：
+
+```
+hostname:application.name:application.instanceId:post
+```
+
+来为每个服务实例命名。同一台服务器上做开发时，需要同时启动多个服务，有可能出现端口冲突的问题，可以使用随机端口来解决：
+
+```properties
+server.port=${radom.init[10000,19999]}
+```
+
+但是此时会导致注册中心的每个相同服务的不同实例的命名都是相同的，因此需要修改客户端的instanceId的生成规则：
+
+```properties
+eureka.intance.instanceId=${spring.application.name}:${random.int}
+```
 
 
 
 
+
+### 健康状态监测
+
+​	注册中心和客户端直接都会想彼此发送心跳来监测服务是否可用，但是通常情况下，心跳成功的服务并不一定可用。比如某个服务A依赖于服务B，但是服务B如果宕机，服务A实际上也是不可用的状态，但是心跳监测无法检测出这个情况，因此需要借助actuator模块来向注册中心提供更加具体的健康信息，做法：添加actuator模块并添加配置：
+
+```properties
+eureka.client.healthcheck.enabled=true
+```
+
+
+
+
+
+
+
+
+
+
+
+123
+
+
+
+### 
 
 
 
