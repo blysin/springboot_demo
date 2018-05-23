@@ -106,7 +106,7 @@ eureka.client.service-url.defaultZone=http://<username>:<password>@t.cn:1111/eur
   如果出现网络问题，心跳可能失败，如果在15分钟后心跳失败次数超过85%，注册中心会将改服务保护起来，但是这种情况下消费者可能出现服务调用失败的情况，此时就需要容错机制，比如**请求重试**，**断路由**等机制。
 
   ```properties
-  eureka.server.enable-self-preservation=false
+  eureka.server.enable-self-preservation=false 	
   # 关闭保护机制
   ```
 

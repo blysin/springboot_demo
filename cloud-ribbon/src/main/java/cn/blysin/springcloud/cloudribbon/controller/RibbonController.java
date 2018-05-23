@@ -15,4 +15,13 @@ public class RibbonController {
         //第一个参数是消费服务的URL，域名写服务名，而不是真正的域名
         return restTemplate.getForEntity("http://helloworld/hello",String.class).getBody();
     }
+
+
+    @RequestMapping("/order")
+    public String getOrder(){
+        //第一个参数是消费服务的URL，域名写服务名，而不是真正的域名
+        return restTemplate.getForEntity("http://orderserver/order/{1}",String.class,121133).getBody();
+    }
+
+
 }
