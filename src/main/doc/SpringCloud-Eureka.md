@@ -119,33 +119,32 @@ eureka.client.service-url.defaultZone=http://<username>:<password>@t.cn:1111/eur
   # 获取服务时间间隔
   ```
 
-  
 
   
 
 ### Client端配置列表
 
-| 参数名                                       | 说明                                                         | 默认值 |
-| -------------------------------------------- | ------------------------------------------------------------ | ------ |
-| enable                                       | 是否启用Eureka客户端                                         | true   |
-| registryFetchIntervalSeconds                 | 从注册中心获取服务列表的时间间隔                             | 30     |
-| instanceInfoReplicationIntervalSeconds       | 续租时间间隔                                                 | 30     |
-| initialInstanceInfoReplicationIntervalSecond | 初始化实例信息到注册中心的间隔                               | 40     |
-| eurekaService UrlPollIntervalSeconds         | 轮询Eureka注册中心地址更改的时间间隔，当使用spring boot config时动态刷新注册中心服务地址时使用 | 300    |
-| eurekaServerReadTimeoutSeconds               | 读取注册中心信息的超市时间                                   | 8      |
-| eurekaServerConnectTimeoutSeconds            | 连接超时时间                                                 | 5      |
-| eurekaServerTotalConnections                 | 客户端与服务端的连接总数                                     | 200    |
-| eurekaServerTotalConnectionsPerHost          | 客户端到每个服务端主机的连接总数                             | 50     |
-| eurekaConnectionIdleTimeoutSeconds           | 注册中心连接的空闲关闭时间                                   | 30     |
-| heartbeatExecutorThreadPoolSize              | 心跳连接的初始化线程数                                       | 2      |
-| heartbeatExecutorExponentialBackOffBound     | 心跳超市重试延迟时间最大倍数值                               | 10     |
-| CacheReFreshExecutorThreadPoolSize           | 缓存刷新线程池的初始化线程数                                 | 2      |
-| useDnsForFetchingServiceUrls                 | 使用DNS来获取注册中心的serviceUrl                            | false  |
-| registerWithEureka                           | 是否将自身注册到注册中心                                     | true   |
-| perferSameZoneEureka                         | 是否偏好使用同一zone的eureka服务端                           | true   |
-| filterOnlyUpInstances                        | 获取实例时是否过滤，仅保留UP状态的实例                       | true   |
-| fetchRegistry                                | 是否从eureka服务端获取注册信息                               | true   |
-|                                              |                                                              |        |
+| 参数名                                      | 说明                                       | 默认值   |
+| ---------------------------------------- | ---------------------------------------- | ----- |
+| enable                                   | 是否启用Eureka客户端                            | true  |
+| registryFetchIntervalSeconds             | 从注册中心获取服务列表的时间间隔                         | 30    |
+| instanceInfoReplicationIntervalSeconds   | 续租时间间隔                                   | 30    |
+| initialInstanceInfoReplicationIntervalSecond | 初始化实例信息到注册中心的间隔                          | 40    |
+| eurekaService UrlPollIntervalSeconds     | 轮询Eureka注册中心地址更改的时间间隔，当使用spring boot config时动态刷新注册中心服务地址时使用 | 300   |
+| eurekaServerReadTimeoutSeconds           | 读取注册中心信息的超市时间                            | 8     |
+| eurekaServerConnectTimeoutSeconds        | 连接超时时间                                   | 5     |
+| eurekaServerTotalConnections             | 客户端与服务端的连接总数                             | 200   |
+| eurekaServerTotalConnectionsPerHost      | 客户端到每个服务端主机的连接总数                         | 50    |
+| eurekaConnectionIdleTimeoutSeconds       | 注册中心连接的空闲关闭时间                            | 30    |
+| heartbeatExecutorThreadPoolSize          | 心跳连接的初始化线程数                              | 2     |
+| heartbeatExecutorExponentialBackOffBound | 心跳超市重试延迟时间最大倍数值                          | 10    |
+| CacheReFreshExecutorThreadPoolSize       | 缓存刷新线程池的初始化线程数                           | 2     |
+| useDnsForFetchingServiceUrls             | 使用DNS来获取注册中心的serviceUrl                  | false |
+| registerWithEureka                       | 是否将自身注册到注册中心                             | true  |
+| perferSameZoneEureka                     | 是否偏好使用同一zone的eureka服务端                   | true  |
+| filterOnlyUpInstances                    | 获取实例时是否过滤，仅保留UP状态的实例                     | true  |
+| fetchRegistry                            | 是否从eureka服务端获取注册信息                       | true  |
+|                                          |                                          |       |
 
 ### 实例名配置
 
@@ -189,7 +188,7 @@ eureka.client.healthcheck.enabled=true
 
 
 
-123
+1
 
 
 
