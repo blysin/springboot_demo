@@ -50,3 +50,11 @@ spring为JMS 、AMQP提供了@JmsListener @RabbitListener 注解在方法上监�
 ## 配置加载权重
 
 命令行>path配置>JNDI>jar包外配置>jar包内配置>@PropertySource>默认配置
+
+
+
+
+
+## SpringCloud服务拆分
+
+​	例如一个电商系统的服务科拆分为：用户管理，订单管理，库存，几份，评论等一系列服务。

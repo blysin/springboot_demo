@@ -1,5 +1,6 @@
 package cn.blysin.springcloud.cloudribbon.controller;
 
+import cn.blysin.springcloud.cloudribbon.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,6 +12,9 @@ public class RibbonController {
     @Autowired
     private RestTemplate restTemplate;
 
+    @Autowired
+    private OrderService orderService;
+
     @RequestMapping("/ribbon")
     public String ribbon(){
         //第一个参数是消费服务的URL，域名写服务名，而不是真正的域名
@@ -21,10 +25,7 @@ public class RibbonController {
 
     @RequestMapping("/order/{orderId}")
     public String getOrder(@PathVariable Integer orderId){
-        //第一个参数是消费服务的URL，域名写服务名，而不是真正的域名
-        String result =  restTemplate.getForObject("http://orderserver/order/{1}",String.class,orderId+1);
-        result =  restTemplate.getForObject("http://orderserver/order/{1}",String.class,orderId+1);
-        return result;
+        return orderService.hello(orderId);
     }
 
 

@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 
 @EnableDiscoveryClient
 @SpringBootApplication
-public class CloudRebbonServer1Application {
+public class CloudRibbonOrderApplication {
 
 	@Bean
 	@LoadBalanced
@@ -18,6 +18,6 @@ public class CloudRebbonServer1Application {
 	}
 
 	public static void main(String[] args) {
-		SpringApplication.run(CloudRebbonServer1Application.class, args);
+		SpringApplication.run(CloudRibbonOrderApplication.class, args);
 	}
 }
