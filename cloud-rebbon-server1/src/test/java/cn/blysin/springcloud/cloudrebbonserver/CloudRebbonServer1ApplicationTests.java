@@ -1,4 +1,4 @@
-package cn.blysin.springcloud.cloudrebbonserver1;
+package cn.blysin.springcloud.cloudrebbonserver;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

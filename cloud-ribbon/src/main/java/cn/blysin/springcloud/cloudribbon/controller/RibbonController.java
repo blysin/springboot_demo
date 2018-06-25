@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.concurrent.ExecutionException;
+
 @RestController
 public class RibbonController {
     @Autowired
@@ -25,7 +27,30 @@ public class RibbonController {
 
     @RequestMapping("/order/{orderId}")
     public String getOrder(@PathVariable Integer orderId){
-        return orderService.hello(orderId);
+        System.out.println("开始时间："+System.currentTimeMillis());
+        String result = orderService.hello(orderId);
+        System.out.println("结束时间："+System.currentTimeMillis());
+        return result;
+    }
+
+    @RequestMapping("/orderAsync/{orderId}")
+    public String getOrderAsync(@PathVariable Integer orderId){
+        try {
+            System.out.println("开始时间："+System.currentTimeMillis());
+            return orderService.helloAsync(orderId).get();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }finally {
+            System.out.println("结束时间："+System.currentTimeMillis());
+        }
+        return null;
+    }
+
+    @RequestMapping("/ping")
+    public String ping(){
+        return orderService.ping();
     }
 
 

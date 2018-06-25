@@ -1,4 +1,4 @@
-package cn.blysin.springcloud.cloudrebbonserver1;
+package cn.blysin.springcloud.cloudrebbonserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
