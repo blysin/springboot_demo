@@ -17,7 +17,13 @@ public class OrderService {
     @Autowired
     RestTemplate restTemplate;
 
-    //restTemplate请求调用失败或者请求调用超市，则执行指定的错误回调方法
+    /**
+     * 发送同步请求
+     * 请求调用失败或者请求调用超市，则执行指定的错误回调方法
+     *
+     * @param orderId
+     * @return
+     */
     @HystrixCommand(fallbackMethod = "errorHandler")
     public String hello(int orderId){
         return restTemplate.getForObject("http://orderserver/order/{1}", String.class, orderId + 1);
@@ -41,7 +47,7 @@ public class OrderService {
         };
     }
 
-    public String errorHandler(int orderId){
+    public String errorHandler(int orderId,Throwable throwable){
         return "something wrong with this service";
     }
 
