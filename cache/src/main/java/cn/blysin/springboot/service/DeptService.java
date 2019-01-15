@@ -9,9 +9,15 @@ import java.util.List;
  * @date 2017/7/25
  */
 public interface DeptService {
+    void insert(Dept dept);
+
+    void update(Dept dept);
+
     Dept get(Integer id);
+
+    void delete(Integer id);
 
     List<Dept> findAll();
 
-    void insert(Dept dept);
+
 }
