@@ -110,9 +110,9 @@
     }
     ```
 
-    ​
+    
 
-    ​
+    
 
 ## JPA
 
@@ -166,7 +166,7 @@
 
     对应Hibernate配置文件中的一对一，一对多，多对一。
 
-    ​
+    
 
 ## 异常处理
 
@@ -212,7 +212,7 @@
 
    包含@SpringBootApplication、@EnableDiscoveryClient、@EnableCircuiBreaker三个注解，
 
-   ​
+   
 
 ## 其他
 
@@ -334,6 +334,34 @@ Spring通过TaskExecutor来实现多线程并发编程，使用ThreadPoolExecuto
 通过实现WebApplicationInitializer，等同与在web.xml中进行配置。
 
 
+
+
+
+# SpringCloud基础组件
+
+基础的独立服务有三个，Eureka注册中心，zuul路由，config配置中心
+
+## Eureka
+
+服务注册和发现
+
+## Ribon
+
+客户端负载均衡
+
+## Feign
+
+将Restful接口封装成类似WebService接口调用方式
+
+## Hystrix
+
+断路器和服务降级
+
+断路器：请求超时处理
+
+服务降级：请求不可用时的替代处理方式
+
+熔断：防止请求并发太多
 
 
 

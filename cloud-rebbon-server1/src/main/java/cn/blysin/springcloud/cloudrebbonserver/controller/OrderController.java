@@ -1,5 +1,7 @@
 package cn.blysin.springcloud.cloudrebbonserver.controller;
 
+import cn.blysin.springcloud.cloudrebbonserver.domain.User;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,6 +23,12 @@ public class OrderController {
             e.printStackTrace();
         }
         return order.toString();
+    }
+
+    @GetMapping("/incret-age")
+    public User incretAge(User user) {
+        user.setAge(user.getAge() + 1);
+        return user;
     }
 
     @RequestMapping("/ping")

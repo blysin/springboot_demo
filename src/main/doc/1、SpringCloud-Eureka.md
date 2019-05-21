@@ -60,6 +60,54 @@ name一样，port、hostname不一样，defaultZone需要指向其他集群服�
 
 
 
+##### 集群环境并制定密码
+
+```properties
+spring.application.name=eureka-server
+server.port=1111
+
+eureka.instance.hostname=t.cn
+eureka.client.service-url.defaultZone=http://<username>:<password>@t1.cn:1112/eureka/,http://<username>:<password>@t1.cn:1113/eureka/
+
+# 开启密码
+security.basic.enabled=true
+security.user.name=user
+security.user.password=password
+```
+
+```properties
+spring.application.name=eureka-server
+server.port=1112
+
+eureka.instance.hostname=t1.cn
+eureka.client.service-url.defaultZone=http://<username>:<password>@t.cn:1111/eureka/,http://<username>:<password>@t1.cn:1113/eureka/
+
+# 开启密码
+security.basic.enabled=true
+security.user.name=user
+security.user.password=password
+
+```
+
+```properties
+spring.application.name=eureka-server
+server.port=1113
+
+eureka.instance.hostname=t1.cn
+eureka.client.service-url.defaultZone=http://<username>:<password>@t.cn:1111/eureka/,http://<username>:<password>@t1.cn:1112/eureka/
+
+# 开启密码
+security.basic.enabled=true
+security.user.name=user
+security.user.password=password
+```
+
+name一样，port、hostname不一样，defaultZone需要指向其他集群服务，注意
+
+
+
+
+
 #### Eureka-Client
 
 ```properties
@@ -110,7 +158,7 @@ eureka.client.service-url.defaultZone=http://<username>:<password>@t.cn:1111/eur
   # 关闭保护机制
   ```
 
-  ​
+  
 
 - 服务启动后会定期去注册中心获取服务列表
 
@@ -120,7 +168,7 @@ eureka.client.service-url.defaultZone=http://<username>:<password>@t.cn:1111/eur
   ```
 
 
-  
+
 
 ### Client端配置列表
 

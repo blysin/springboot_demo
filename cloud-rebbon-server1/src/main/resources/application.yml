@@ -1,6 +1,6 @@
 server:
 #  port: ${random.int[10000,19999]}
-  port: 8011
+  port: 8013
 eureka:
   instance:
     instance-id: ${spring.application.name}:${random.int}

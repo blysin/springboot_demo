@@ -1,10 +1,12 @@
 # SpringCloud-Ribbon
 
-用于服务的消费者发现服务和实现客户端负载
+用于服务的消费者发现服务和实现客户端负载均衡
 
 ![Ribbon-Eureka关系图.png](image/Ribbon-Eureka关系图.png)
 
 ## 使用
+
+默认启用ribbon，引入maven后无需额外配置
 
 依赖：
 
@@ -56,3 +58,14 @@ public class CloudRibbonApplication {
 
 
 
+## 配置负载算法
+
+yml文件：
+
+```yml
+服务名:
+	ribbon:
+		NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+```
+
+为特定的服务配置算法，实现类为com.netflix.loadbalancer包下
