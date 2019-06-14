@@ -355,13 +355,52 @@ Spring通过TaskExecutor来实现多线程并发编程，使用ThreadPoolExecuto
 
 ## Hystrix
 
-断路器和服务降级
-
-断路器：请求超时处理
+断路器和服务降级，官方说法：熔断降级
 
 服务降级：请求不可用时的替代处理方式
 
-熔断：防止请求并发太多
+熔断：失败超过一定百分比直接返回降级请求
 
 
 
+# 微服务总结
+
+## 为什么用微服务
+
+1. 可以解耦，搞复杂性带系统，代码容易耦合
+2. 将复杂的系统拆分，每个服务功能功能专一，代码足够内聚
+3. 功能细化，开发效率比较高
+    1. 每个服务功能单一，好开发，好调试
+    2. 每个服务值负责业务逻辑代码，不会与html+css之类的页面代码混合
+4. 开发语言不受限制，可以很方便的与第三方整合
+5. 不会出现某个服务宕机导致整个系统无法使用
+
+
+
+
+
+### 缺点
+
+1. 分布式的系统也会引入复杂性
+2. 服务增加运维难度也会增加
+3. 服务之间http通信受限
+4. 分布式系统数据一致性的问题
+5. 性能监控复杂
+
+
+
+# SpringCloud高级扩展
+
+1. SpringCloud Stream：流式计算，消息驱动的微服务
+2. SpringCloud Bus：消息总线
+3. SpringCloud Turbine：聚合服务器发送事件流数据的一个工具，用来监控集群下hystrix的metrics情况
+4. SpringCloud Task：分布式任务调度
+5. SpringCloud Sleuth：日志收集工具，，实现了一种分布式追踪方案，封装了Dapper和log-based追踪及Zipkin和HTrace操作
+6. SpringCloud Security：基于SpringSecurity的安全工具
+7. 服务部署：k8s，OpenStack
+8. 全链路追踪：Zipkin，brave
+9. 服务监控：zabbix
+10. SpringCloud CLI：基于命令行方式快速简历云组件
+11. 分布式锁，分布式唯一id，分布式投票机制
+12. 安全：auth2
+13. 自动化部署：gittab+jenkinx+docker
